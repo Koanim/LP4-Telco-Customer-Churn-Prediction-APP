@@ -43,7 +43,8 @@ def background():
                     st.caption('The predict page takes responses based on following variables :orange[gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges], then you can select which model you prefer to run your prediction ')
                 with st.expander(':violet[**History page**] -'):
                     st.caption('This page keeps the records of all predictions made by this app, these data will be valuable to determine if our models needs improvement, as well as understand which model is predicting more accurately')
-                with st.expander(':violet[**Bulk Predict Page**] -')
+                with st.expander(':violet[**Bulk Predict Page**] -'):
+                    st.caption('Upload data with the same columns and data types similar to the original dataset after clicking the predict button, you will get the prediction valuse for each row')
                 
                 
                 st.write("""#### Contact Me 📧""")
