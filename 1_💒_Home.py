@@ -41,8 +41,10 @@ def background():
                     st.caption('KPI - these visualizations helps us answer some specific questions, especially in relation to the target variable, in this case :red[Churn]. This help understand how other variables affect :red[Churn]')
                 with st.expander(":violet[**Predict Page**] -"):
                     st.caption('The predict page takes responses based on following variables :orange[gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges], then you can select which model you prefer to run your prediction ')
-                with st.expander(':violet[**History page**]'):
+                with st.expander(':violet[**History page**] -'):
                     st.caption('This page keeps the records of all predictions made by this app, these data will be valuable to determine if our models needs improvement, as well as understand which model is predicting more accurately')
+                with st.expander(':violet[**Bulk Predict Page**] -')
+                
                 
                 st.write("""#### Contact Me 📧""")
                 st.caption(""" 
