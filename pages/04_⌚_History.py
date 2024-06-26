@@ -41,7 +41,7 @@ def display_historic_predictions():
     return history
         
         
-display_historic_predictions()
+#display_historic_predictions()
 
         
 if st.session_state['authentication_status']:
