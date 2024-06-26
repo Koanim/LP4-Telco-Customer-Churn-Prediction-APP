@@ -38,6 +38,11 @@ def display_historic_predictions():
         history = pd.read_csv(csv_path)
         
         st.dataframe(history)
+    return history
+        
+        
+display_historic_predictions()
+
         
 if st.session_state['authentication_status']:
     authenticator.logout(location='sidebar') 
