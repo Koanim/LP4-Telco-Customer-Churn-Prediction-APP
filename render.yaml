@@ -1,0 +1,16 @@
+# Exported from Render on 2024-06-27T08:27:25Z
+services:
+- type: web
+  name: LP4-Telco-Customer-Churn-Prediction-APP-2
+  runtime: python
+  repo: https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP
+  plan: free
+  envVars:
+  - key: .streamlit/config.yaml
+    sync: false
+  - key: .lp4env
+    sync: false
+  region: frankfurt
+  buildCommand: pip install -r requirements.txt
+  startCommand: "streamlit run 1_\U0001F492_Home.py"
+version: "1"
