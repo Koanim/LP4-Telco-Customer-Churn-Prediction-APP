@@ -14,7 +14,7 @@ import yaml
 from yaml.loader import SafeLoader
 
 st.set_page_config(
-    page_title='Bulk Predict Page',
+    page_title='Predict Page',
     page_icon='🔍',
     layout='wide'
 )
@@ -86,8 +86,8 @@ def main():
     st.title("Prediction Application")
 
     # Initialize session state for prediction and probability
-    if 'prediction' not in st.session_state:
-        st.session_state['prediction'] = None
+    if 'predictions' not in st.session_state:
+        st.session_state['predictions'] = None
     if 'probability' not in st.session_state:
         st.session_state['probability'] = None
 
@@ -99,30 +99,30 @@ def main():
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
 
-
     # Make predictions
     if st.button("Make Predictions"):
-        prediction, probability = make_predictions(pipeline, encoder, df)
-        if prediction is not None and probability is not None:
-            df['Predictions'] = prediction if prediction is not None else 'N/A'
-            
+            prediction, probability = make_predictions(pipeline, encoder, df)
+            if prediction is not None and probability is not None:
+                st.session_state["prediction"] = prediction
+                st.session_state["probability"] = probability
+                df['Predictions'] = prediction if prediction is not None else 'N/A'
 
-            #df['predictions'] = prediction
-            #if prediction == 'No':
-                #df['Probability'] = st.session_state["probability"][0]
-            #else:
-                #df['Probability'] = st.session_state["probability"][1]
-            
-            #df['model_used'] = st.session_state['selected_model']
+                if prediction == 'No':
+                    df['Probability'] = st.session_state["probability"][0]
+                else:
+                    df['Probability'] = st.session_state["probability"][1]
+                
+                df['model_used'] = st.session_state['selected_model']
 
-        csv = df.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="Download Predictions",
-            data=csv,
-            file_name='predictions.csv',
-            mime='text/csv',
-        )
-
+            csv = df.to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="Download Predictions",
+                data=csv,
+                file_name='predictions.csv',
+                mime='text/csv',
+            )
+    else:
+        st.warning("Please upload a CSV file.")
 
 if st.session_state['authentication_status']:    
     authenticator.logout(location='sidebar')
