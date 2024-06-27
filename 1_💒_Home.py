@@ -19,7 +19,17 @@ def background():
     with col2:
         st.image('resources/brainchart.webp', width=200)
     with col3:
-        pass
+        st.write("""#### Contact Me 📧""")
+        st.caption(""" 
+                - For Help with this app
+                - For Collaboration on a different project
+                - For feedback and Enquiry
+                email me via victor.nyarko@ymail.com
+                """)
+        st.caption('For more information about me, checkout my!')
+        st.write(':red[[GitHub](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP), [LinkdIn](https://www.linkedin.com/in/victor-anim-83115818/), [Medium]()] pages')
+                
+        
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
