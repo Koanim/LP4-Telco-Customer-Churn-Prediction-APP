@@ -104,8 +104,8 @@ The app will be launched in your default web browser and can then be used to mak
 
 ## Model Training and Saving ⏳
 
-The Xgboost, Catboost and Gradient boost model was trained using the Telecommunication Customer Churn as shown in this GitHub repository: [Telco-Customer-Churn-Prediction-APP
-](https://github.com/bamzyyyy/Telco-Customer-Churn-Prediction-APP/).
+The Xgboost, Catboost and Gradient boost model was trained using the Telecommunication Customer Churn as shown in this GitHub repository: [LP4-Telco-Customer-Churn-Prediction-APP
+](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP/).
 ## Acknowledgments 🙏
 
 I would like to express my gratitude to the [Azubi Africa Data Analyst Program](https://www.azubiafrica.org/data-analytics) for their support and for offering valuable projects as part of this program. Not forgeting my scrum masters on this project [Rachel Appiah-Kubi](https://www.linkedin.com/in/racheal-appiah-kubi/) & [Emmanuel Koupoh](https://github.com/eaedk)
