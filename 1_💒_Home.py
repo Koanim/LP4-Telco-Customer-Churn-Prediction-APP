@@ -20,7 +20,7 @@ def background():
         st.write('\n\n')
         st.caption("""
                 For more information about me, checkout my!
-                :red[[GitHub](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP), [LinkdIn](https://www.linkedin.com/in/victor-anim-83115818/), [Medium]()] pages
+                :red[[GitHub](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP), [LinkdIn](https://www.linkedin.com/in/victor-anim-83115818/), [Medium](https://medium.com/@victor.nyarko/my-first-machine-learning-app-for-predicting-telco-customer-churn-50bfdb2ecb30)] pages
                 """)
         
         
