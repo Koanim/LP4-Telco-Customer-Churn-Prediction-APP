@@ -16,10 +16,26 @@ def background():
     col1, col2, col3 = st.columns(3)
     with col1:
         st.caption('My First Machine Learning App 🎉')
+        
+        st.write('\n\n')
+        st.caption("""
+                For more information about me, checkout my!
+                :red[[GitHub](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP), [LinkdIn](https://www.linkedin.com/in/victor-anim-83115818/), [Medium]()] pages
+                """)
+        
+        
     with col2:
         st.image('resources/brainchart.webp', width=200)
     with col3:
-        pass
+        st.caption("""##### Contact Me 📧""")
+        st.caption(""" 
+                - For Help with this app
+                - For Collaboration on a different project
+                - For feedback and Enquiry
+                email me via victor.nyarko@ymail.com
+                """)
+        
+        
     with st.container():
         col1, col2 = st.columns(2)
         with col1:
@@ -46,17 +62,6 @@ def background():
                 with st.expander(':violet[**Bulk Predict Page**] -'):
                     st.caption('Upload data with the same columns and data types similar to the original dataset after clicking the predict button, you will get the prediction valuse for each row')
                 
-                
-                st.write("""#### Contact Me 📧""")
-                st.caption(""" 
-                        - For Help with this app
-                        - For Collaboration on a different project
-                        - For feedback and Enquiry
-                        
-                        email me via victor.nyarko@ymail.com
-                        """)
-                st.caption('For more information about me, checkout my!')
-                st.write(':red[[GitHub](https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP), [LinkdIn](https://www.linkedin.com/in/victor-anim-83115818/), [Medium]()] pages')
                 
         with col2:                    
             st.write('#### :rainbow[ Telco Churn Overview]')
@@ -128,7 +133,7 @@ def background():
 7.  The average number of churn for customers that have **Yes** values for **seniorCitizen** is greater than or equal to those with **No** values.
                 """)
         
-with open('config.yaml') as file:
+with open('.streamlit/config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 authenticator = stauth.Authenticate(
