@@ -6,7 +6,7 @@ services:
   repo: https://github.com/Koanim/LP4-Telco-Customer-Churn-Prediction-APP
   plan: free
   envVars:
-  - key: .streamlit/config.yaml
+  - key: config.yaml
     sync: false
   - key: .lp4env
     sync: false
