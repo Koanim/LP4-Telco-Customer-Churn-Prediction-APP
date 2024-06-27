@@ -38,7 +38,7 @@ def display_historic_predictions():
         history = pd.read_csv(csv_path)
         
         st.dataframe(history)
-    return history
+    #return history
         
         
 #display_historic_predictions()
